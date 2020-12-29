@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+            <title>PicPic</title>
+            <script>
+                  window.img_paths={"name":"assets","type":"directory","size":"16.88MB","children":[{"name":"原版.jpg","type":"file","extension":"jpg","size":"212.8KB","dimension":"4096x2160","path":"原版.jpg"},{"name":"原版亮色.jpg","type":"file","extension":"jpg","size":"221.24KB","dimension":"4096x2160","path":"原版亮色.jpg"},{"name":"原版暗色.jpg","type":"file","extension":"jpg","size":"244.14KB","dimension":"4096x2160","path":"原版暗色.jpg"},{"name":"美女 (2).jpg","type":"file","extension":"jpg","size":"723.06KB","dimension":"3840x2160","path":"美女 (2).jpg"},{"name":"Windows 10壁纸合集1","type":"directory","size":"15.48MB","children":[{"name":"Windows 10壁纸","type":"directory","size":"15.48MB","children":[{"name":"A1.jpg","type":"file","extension":"jpg","size":"181.76KB","dimension":"3240x2160","path":"Windows 10壁纸合集1/Windows 10壁纸/A1.jpg"},{"name":"A10.jpg","type":"file","extension":"jpg","size":"166.88KB","dimension":"7167x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A10.jpg"},{"name":"A11.jpg","type":"file","extension":"jpg","size":"174.09KB","dimension":"7167x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A11.jpg"},{"name":"A12.jpg","type":"file","extension":"jpg","size":"89.84KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A12.jpg"},{"name":"A13.jpg","type":"file","extension":"jpg","size":"2.83MB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A13.jpg"},{"name":"A14.jpg","type":"file","extension":"jpg","size":"91.23KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A14.jpg"},{"name":"A15.png","type":"file","extension":"png","size":"397.83KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A15.png"},{"name":"A16.jpg","type":"file","extension":"jpg","size":"80.65KB","dimension":"3840x2160","path":"Windows 10壁纸合集1/Windows 10壁纸/A16.jpg"},{"name":"A17.png","type":"file","extension":"png","size":"815.86KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A17.png"},{"name":"A18.png","type":"file","extension":"png","size":"2.36MB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A18.png"},{"name":"A19.png","type":"file","extension":"png","size":"6.37MB","dimension":"3840x2160","path":"Windows 10壁纸合集1/Windows 10壁纸/A19.png"},{"name":"A2.jpg","type":"file","extension":"jpg","size":"76.97KB","dimension":"3840x2160","path":"Windows 10壁纸合集1/Windows 10壁纸/A2.jpg"},{"name":"A3.jpg","type":"file","extension":"jpg","size":"414.01KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A3.jpg"},{"name":"A4.jpg","type":"file","extension":"jpg","size":"835.64KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A4.jpg"},{"name":"A5.jpg","type":"file","extension":"jpg","size":"128.36KB","dimension":"5120x2880","path":"Windows 10壁纸合集1/Windows 10壁纸/A5.jpg"},{"name":"A6.jpg","type":"file","extension":"jpg","size":"146.51KB","dimension":"5120x2880","path":"Windows 10壁纸合集1/Windows 10壁纸/A6.jpg"},{"name":"A7.jpg","type":"file","extension":"jpg","size":"91.92KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A7.jpg"},{"name":"A8.jpg","type":"file","extension":"jpg","size":"122.75KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A8.jpg"},{"name":"A9.jpg","type":"file","extension":"jpg","size":"104.81KB","dimension":"4500x3000","path":"Windows 10壁纸合集1/Windows 10壁纸/A9.jpg"}]}]}]}
+            </script>
+      </head>
+
+      <script src='./libs/js/include.js'></script>
+
+      <link
+            rel="shortcut icon"
+            href="./favicon.ico"
+      >
+
+      <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+      >
+
+      <style>
+            @import './components/Detail/index.css';
+@import './components/Empty/index.css';
+@import './components/FolderSelect/index.css';
+@import './components/Header/index.css';
+@import './components/ImgItems/index.css';
+@import './components/Msg/index.css';
+@import './components/Pagination/index.css';
+
+      </style>
+
+      <style>
+            @import './libs/css/atom.min.css';
+            @import './styles/init.css';
+            @import './styles/index.css';
+            @import './styles/mobile.css';
+      </style>
+
+      <body>
+            <div
+                  id="landing_wrap"
+                  class="landing_wrap w_100vw h_100vh border_box flex justify_center align_center fixed top_0 left_0 z_index_1000 bg_white transition_normal"
+            >
+                  <div class="landing flex flex_column align_center">
+                        <img
+                              class="logo_landing"
+                              src="./images/logo_picpic_black.png"
+                              alt="logo_picpic_black"
+                        >
+                  </div>
+            </div>
+            <div
+                  id="app"
+                  style="opacity: 0;"
+            >
+                  <div class="header_wrap_placeholder w_100"></div>
+                  <x-header></x-header>
+                  <x-img-items></x-img-items>
+                  <x-empty></x-empty>
+                  <x-detail></x-detail>
+                  <x-pagination></x-pagination>
+                  <x-msg></x-msg>
+                  <x-folder-select></x-folder-select>
+
+                  <include src="./components/Detail/index.html"></include>
+<include src="./components/Empty/index.html"></include>
+<include src="./components/FolderSelect/index.html"></include>
+<include src="./components/Header/index.html"></include>
+<include src="./components/ImgItems/index.html"></include>
+<include src="./components/Msg/index.html"></include>
+<include src="./components/Pagination/index.html"></include>
+
+            </div>
+      </body>
+
+      <script src='./libs/js/vue.min.js'></script>
+      <script src='./libs/js/lodash.chunk.js'></script>
+      <script src='./libs/js/lodash.throttle.js'></script>
+      <script src='./libs/js/clipboard.js'></script>
+      <script src='./index.js'></script>
+
+      <script src="./components/Detail/index.js"></script>
+<script src="./components/Empty/index.js"></script>
+<script src="./components/FolderSelect/index.js"></script>
+<script src="./components/Header/index.js"></script>
+<script src="./components/ImgItems/index.js"></script>
+<script src="./components/Msg/index.js"></script>
+<script src="./components/Pagination/index.js"></script>
+
+
+</html>
