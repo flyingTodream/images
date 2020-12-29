@@ -12,12 +12,10 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build
-      run: npm install && npm run build && cd dist && ls
+      run: npm install && npm run build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
-    - name: Commit
-      run: git add . && git commit -m "部署" && git push
